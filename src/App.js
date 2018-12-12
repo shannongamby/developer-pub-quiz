@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Question from './components/Question'
+import Quiz from './components/Quiz'
+import quizData from './quiz_question/data'
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+  }
+
   render() {
     return (
-        < Question />
-
+        <div>
+          <Quiz data={ quizData } />
+        </div>
     );
   }
 }

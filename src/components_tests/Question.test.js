@@ -2,13 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Question from '../components/Question';
 import { shallow, mount, render } from 'enzyme';
-import sinon from 'sinon';
-
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  shallow(<Question />);
-  ReactDOM.unmountComponentAtNode(div);
-});
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -16,12 +9,15 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it('has a yes button', () => {
-  const wrap = mount(<Question />)
-  expect(wrap.find('#yes_button').text()).toEqual('YES')
+it('renders the text', () => {
+  const wrap = shallow(<Question text="My custom text" />)
+  expect(wrap.find('div').text()).toEqual('My custom text')
 });
 
-it('has a no button', () => {
-  const wrap = mount(<Question />)
-  expect(wrap.find('#no_button').text()).toEqual('NO')
+it('rerender with new props', () => {
+  const wrap = shallow(<Question text="My custom text" />)
+
+  wrap.setProps({ text: "Another custom text" })
+
+  expect(wrap.find('div').text()).toEqual('Another custom text')
 });
