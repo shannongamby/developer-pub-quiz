@@ -23,6 +23,5 @@ it('has a yes button', () => {
 
 it('has a no button', () => {
   const wrap = mount(<Question />)
-  console.log(wrap);
   expect(wrap.find('#no_button').text()).toEqual('NO')
 });
