@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Question from '../components/Question';
 import { shallow, mount, render } from 'enzyme';
+import sinon from 'sinon';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
@@ -22,5 +23,6 @@ it('has a yes button', () => {
 
 it('has a no button', () => {
   const wrap = mount(<Question />)
+  console.log(wrap);
   expect(wrap.find('#no_button').text()).toEqual('NO')
 });
