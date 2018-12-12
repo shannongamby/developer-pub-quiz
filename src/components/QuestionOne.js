@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 class QuestionOne extends Component {
   render() {
-    return null
+    return (
+      <p>Render the question</p>
+    );
   }
 
 }
