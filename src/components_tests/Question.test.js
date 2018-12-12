@@ -15,7 +15,12 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-it('has a button', () => {
+it('has a yes button', () => {
   const wrap = mount(<Question />)
-  expect(wrap.find('button').text()).toEqual('YES')
+  expect(wrap.find('#yes_button').text()).toEqual('YES')
+});
+
+it('has a no button', () => {
+  const wrap = mount(<Question />)
+  expect(wrap.find('#no_button').text()).toEqual('NO')
 });

@@ -5,7 +5,8 @@ class Question extends Component {
     return (
       <div className="App">
         <div>Is 1 greater than 2?</div>
-        <button>YES</button>
+        <button id='yes_button'>YES</button>
+        <button id='no_button'>NO</button>
       </div>
     );
   }
