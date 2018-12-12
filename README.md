@@ -17,21 +17,19 @@ As a user,
 So that I can keep track of my game,
 I can see my score updating.
 ```
-## Screenshot
-![screenshot](example.png)
+
 ### To set up the project
-Clone the repo https://github.com/NaomiBid/final-project-backend
-and then run:
+Clone this repo and then run:
 ```
-$ bundle
+$ npm install
 ```
 ### To run tests:
 ```
-rspec
+yarn test
 ```
 ### To run linting:
 ```
-rubocop
+---
 ```
 ## Future updates
 1.
