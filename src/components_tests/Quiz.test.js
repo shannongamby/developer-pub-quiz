@@ -9,4 +9,8 @@ describe('<Quiz />', () => {
     ReactDOM.render(<Quiz />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
+
+  it('renders the first question', () => {
+
+  });
 });
