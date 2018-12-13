@@ -6,7 +6,7 @@ import quizData from './quizquestions/data'
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="App">
         <Quiz data={ quizData } />
       </div>
     );
