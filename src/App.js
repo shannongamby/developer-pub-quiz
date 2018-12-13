@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Question from './components/Question'
+import Quiz from './components/Quiz.js'
+import quizData from './quizquestions/data'
 
 class App extends Component {
   render() {
     return (
-      <div className="Question">
-        < Question />
+      <div>
+        <Quiz data={ quizData } />
       </div>
     );
   }

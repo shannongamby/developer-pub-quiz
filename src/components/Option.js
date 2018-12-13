@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Question extends Component {
+class Option extends Component {
 
   constructor(props) {
     super(props);
@@ -9,11 +9,11 @@ class Question extends Component {
       text: props.text,
     };
   }
+
   render() {
-    return (
+    return(
       <div>{ this.state.text }</div>
     )
   }
 }
-
-export default Question;
+export default Option;
