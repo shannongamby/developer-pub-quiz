@@ -11,7 +11,7 @@ class Question extends Component {
   }
   render() {
     return (
-      <div>{this.state.text}</div>
+      <div>{ this.state.text }</div>
     )
   }
 }
