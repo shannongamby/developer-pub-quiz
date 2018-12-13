@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 
 class Question extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      text: props.text,
+    };
+  }
   render() {
     return (
-      <div className="App">
-        <div>Is 1 greater than 2?</div>
-        <button>YES</button>
-      </div>
-    );
+      <div>{this.state.text}</div>
+    )
   }
 }
 
