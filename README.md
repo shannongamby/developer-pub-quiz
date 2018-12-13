@@ -1,5 +1,7 @@
+[![Build Status](https://travis-ci.com/shannongamby/developer-pub-quiz.svg?branch=master)](https://travis-ci.com/shannongamby/developer-pub-quiz)
 # Final Project  - Pub Quiz
-Web app Pub Quiz built with Ruby on Rails and React Native.
+Web app Pub Quiz built with Ruby on Rails and React Native.  
+Deployed App: https://developer-pub-quiz.herokuapp.com/
 ## Team approach
 .
 ## MVP User Stories
