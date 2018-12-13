@@ -1,0 +1,7 @@
+language: node.js
+npm:
+- 6.4.1
+
+script:
+  - npm install
+  - npm test
