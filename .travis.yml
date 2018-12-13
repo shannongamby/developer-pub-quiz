@@ -10,4 +10,4 @@ deploy:
   app: developer-pub-quiz
   provider: heroku
   api_key:
-    secure: "HEROKU_API_KEY"
+    secure: HEROKU_API_KEY
