@@ -6,11 +6,11 @@ let quizData = [
    options: [
      {
        text: "Yes!!!!!!!!!!!",
-       isCorrect: true
+       isCorrect: false
      },
      {
        text: "No",
-       isCorrect: false
+       isCorrect: true
      }
    ]
  },
