@@ -9,5 +9,4 @@ script:
 deploy:
   app: developer-pub-quiz
   provider: heroku
-  api_key:
-    secure: HEROKU_API_KEY
+  api_key: 3a68b6f4-5a69-4f83-9b33-3c852ed2516d
