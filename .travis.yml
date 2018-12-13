@@ -5,3 +5,8 @@ node_js:
 script:
   - npm install
   - npm test
+
+deploy:
+  app: developer-pub-quiz
+  provider: heroku
+  api_key: HEROKU_API_KEY
