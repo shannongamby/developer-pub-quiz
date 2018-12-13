@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Question from './components/Question.js'
-import Option from './components/Option.js'
+import Quiz from './components/Quiz.js'
+import quizData from './quizquestions/data'
 
 class App extends Component {
   render() {
     return (
       <div>
-    
+        <Quiz data={ quizData } />
       </div>
     );
   }
