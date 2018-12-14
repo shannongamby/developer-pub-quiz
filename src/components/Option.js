@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Button } from 'react-bootstrap';
 class Option extends Component {
 
   constructor(props) {
@@ -20,7 +20,7 @@ class Option extends Component {
 
   render() {
     return (
-        <div onClick={this.state.onAnswerSelected}>{this.state.text}</div>
+        <div onClick={this.state.onAnswerSelected}><Button bsStyle="primary">{this.state.text}</Button></div>
     );
   }
 }
