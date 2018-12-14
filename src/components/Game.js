@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Quiz from '../components/Quiz.js'
+import QuizTwo from '../components/QuizTwo.js'
 import quizData from '../quizquestions/data'
 
 class Game extends Component {
@@ -8,7 +9,8 @@ class Game extends Component {
   }
   render(){
     return(
-      <div><Quiz data={ quizData } /></div>
+      <div><Quiz data={ quizData } />
+      <QuizTwo data={ quizData } /></div>
     );
   }
 }
