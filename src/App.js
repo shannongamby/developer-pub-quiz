@@ -4,25 +4,34 @@ import Quiz from './components/Quiz.js'
 import quizData from './quizquestions/data'
 import { Button } from 'react-bootstrap';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
+import { GoogleComponent } from 'react-google-location'
+
+const API_KEY = "AIzaSyCpIBIq2pNTtVdgaWZdqUvRqOqlibzoF4g"
 
 class App extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      place: null,
+    };
+  }
+
   render() {
     return (
       <div className="App">
-        <Quiz data={ quizData } />
-        <Map google={this.props.google} zoom={14}>
+      <Quiz data={ quizData } />
+         <GoogleComponent
 
-        <Marker onClick={this.onMarkerClick}
-          name={'Current location'} />
-
-          <InfoWindow onClose={this.onInfoWindowClose}>
-          <div>
-        
-          </div>
-          </InfoWindow>
-          </Map>
+          apiKey={API_KEY}
+          language={'en'}
+          country={'country:in|country:us'}
+          coordinates={true}
+          locationBoxStyle={'custom-style'}
+          locationListStyle={'custom-style-list'}
+          onChange={(e) => { this.setState({ place: e }) }} />
       </div>
-    );
+
+    )
   }
 }
 
