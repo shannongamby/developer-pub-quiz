@@ -1,15 +1,16 @@
 body {
-  background-color: #dddaff;
+  background-image: url("pub.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: static;
 }
 
 .App {
   text-align: center;
-  margin-top: 250px;
-  margin-left: 50px;
-  margin-right: 50px;
-  padding: 10px;
+  margin: 100px;
+  padding: 50px;
   border-radius: 15px;
-  background-color: black;
+  background-color: #e6d7a8;
 }
 
 .App-logo {
@@ -18,14 +19,18 @@ body {
 }
 
 .question {
-  color: #62f0e9;
+  color: #75502b;
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
 }
 
 .buttons {
   margin-bottom: 10px;
-  color: #62f0e9;
+  font-family: 'Cinzel', serif;
+  color: #75502b;
   border-radius: 15px;
-  background-color: black;
+  border-color: #75502b;
+  background-color: #e6d7a8;
 };
 
 .App-header {
