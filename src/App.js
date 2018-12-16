@@ -21,31 +21,9 @@ class App extends Component {
     return (
       <div className="App">
       <Quiz data={ quizData } />
-         <GoogleComponent
-
-          apiKey={API_KEY}
-          language={'en'}
-          country={'country:in|country:us'}
-          coordinates={true}
-          locationBoxStyle={'custom-style'}
-          locationListStyle={'custom-style-list'}
-          onChange={(e) => { this.setState({ place: e }) }} />
-          <Map google={this.props.google} zoom={14}>
-
-        <Marker onClick={this.onMarkerClick}
-          name={'Current location'} />
-
-          <InfoWindow onClose={this.onInfoWindowClose}>
-          <div>
-
-          </div>
-          </InfoWindow>
-          </Map>
       </div>
     )
   }
 }
 
-export default GoogleApiWrapper({
-  apiKey: ("AIzaSyA2yE421Wa22_1aNakfIBWdQv265puS1EE")
-})(App)
+export default App;
