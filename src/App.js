@@ -6,7 +6,7 @@ import { Button } from 'react-bootstrap';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 import { GoogleComponent } from 'react-google-location'
 
-const API_KEY = "AIzaSyCpIBIq2pNTtVdgaWZdqUvRqOqlibzoF4g"
+const API_KEY = "AIzaSyA2yE421Wa22_1aNakfIBWdQv265puS1EE"
 
 class App extends Component {
   constructor(props) {
@@ -17,6 +17,7 @@ class App extends Component {
   }
 
   render() {
+    console.warn("result return here",this.state.place)
     return (
       <div className="App">
       <Quiz data={ quizData } />
@@ -29,12 +30,22 @@ class App extends Component {
           locationBoxStyle={'custom-style'}
           locationListStyle={'custom-style-list'}
           onChange={(e) => { this.setState({ place: e }) }} />
-      </div>
+          <Map google={this.props.google} zoom={14}>
 
+        <Marker onClick={this.onMarkerClick}
+          name={'Current location'} />
+
+          <InfoWindow onClose={this.onInfoWindowClose}>
+          <div>
+
+          </div>
+          </InfoWindow>
+          </Map>
+      </div>
     )
   }
 }
 
 export default GoogleApiWrapper({
-  apiKey: ("AIzaSyCpIBIq2pNTtVdgaWZdqUvRqOqlibzoF4g")
+  apiKey: ("AIzaSyA2yE421Wa22_1aNakfIBWdQv265puS1EE")
 })(App)

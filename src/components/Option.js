@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Grid, Row, Col } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 class Option extends Component {
 
