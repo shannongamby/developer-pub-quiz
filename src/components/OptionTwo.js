@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Option extends Component {
+class OptionTwo extends Component {
 
   constructor(props) {
     super(props);
@@ -12,10 +12,8 @@ class Option extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    this.setState({
-      text: nextProps.text,
-      onAnswerSelected: nextProps.onAnswerSelected
-    });
+    this.state.test = nextProps.text;
+    this.state.onAnswerSelected = nextProps.onAnswerSelected;
   }
 
   method() {
@@ -32,4 +30,4 @@ class Option extends Component {
   }
 }
 
-export default Option;
+export default OptionTwo;

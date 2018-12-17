@@ -20,11 +20,12 @@ class Quiz extends Component {
       let numberOfQuestions = this.state.quiz.length
       let hasReachedTheEnd = newIndex >= numberOfQuestions
 
-      alert((option.isCorrect ? 'Nice!' : 'Wrong!') + ' Score: ' + newScore)
+      alert((option.isCorrect ? 'Nice!' : 'Wrong!') + ' Player 1 Score: ' + newScore)
 
       if(hasReachedTheEnd) {
         alert('You reached the end. Your Score: ' + newScore + '/' + numberOfQuestions)
         this.setState({ score: 0, currentIndex: 0 })
+        this.props.handleQuizOneSwitch()
       } else {
         this.setState({ score: newScore, currentIndex: newIndex })
       }
@@ -44,7 +45,12 @@ class Quiz extends Component {
 
   renderOption(option, index) {
       return (
-          <Option key={index} text={ option.text } onAnswerSelected={this.handleAnswerSelection(option).bind(this)} />
+          <Option
+          key={index}
+          text={ option.text }
+          onAnswerSelected={this.handleAnswerSelection(option).bind(this)}
+          handleQuizOneSwitch = {this.props.handleQuizOneSwitch}
+          />
       );
   }
 }
