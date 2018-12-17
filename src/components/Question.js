@@ -16,7 +16,7 @@ class Question extends Component {
 
   render(){
     return(
-      <div>{ this.state.text }</div>
+      <div className="question"><h1>{ this.state.text }</h1></div>
     );
   }
 }

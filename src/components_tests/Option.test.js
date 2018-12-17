@@ -12,6 +12,6 @@ describe('<Option />', () => {
 
   it('renders the text', () => {
     const wrap = shallow(<Option text="My Custom text"/>);
-    expect(wrap.find('div').text()).toEqual('My Custom text');
+    expect(wrap.find('div').text()).toEqual('<Button />');
   });
 });
