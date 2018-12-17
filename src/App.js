@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import Quiz from './components/Quiz.js'
+import Game from './components/Game.js'
 import quizData from './quizquestions/data'
 import { Button } from 'react-bootstrap';
 
@@ -19,7 +19,7 @@ class App extends Component {
     console.warn("result return here",this.state.place)
     return (
       <div className="App">
-      <Quiz data={ quizData } />
+        <Game data={ quizData } />
       </div>
     )
   }
