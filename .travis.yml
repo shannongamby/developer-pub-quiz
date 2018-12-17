@@ -1,12 +1,11 @@
 language: node_js
 node_js:
-- "node"
-
+- node
 script:
-  - npm install
-  - npm test
-
+- npm install
+- npm test
 deploy:
   app: developer-pub-quiz
   provider: heroku
-  api_key: 3a68b6f4-5a69-4f83-9b33-3c852ed2516d
+  api_key:
+    secure: SITkH1WUrDRncYXDTP9kxgaZ6SgKW1R2v6DT+NEfTt7L+N2gq+YL8NUzeYg+38os3TwsyANUt7H047jtmtGW1TC4ge7LL14N5JSjjXirtWifyfpSVH7Jc6wNvBjyg2O78NDTqjBbJKEkbrjbLHpowfnw8XV2A9n1loY622HAdLLURQsFKKGyc/MP+Hy20j0RdjoVn7mzQd911gVT0ukS3Wpmw+aDqa2yJRiCw5UgqMuTD/lpmBX6oP3EOzJ/ohb3EuuN8cIyWGyVza4qhSw57ehyExKEDdUWj+nUSNVv4BOU0INoRG+JN/Qa15RcvLT5JimgVh6zH++kKqz1Ssdw1iuRFEywUbaGO+NAJ/XWeYknZryFaZIMWT4TqoMJwnJCjlVrRIBi9c/L3FuF4TXtYwUTtSEYKfNwiI7Ugyz94pKSxXgSAMvQUo3m+FyLynOQS3/iSJizfbKZb5Rk+hzrxxLOINYsDz3AAgPglK0zygWmqaT2STG/Mu6poNzjDynqWRPhO5IlZt4Tm7cqfskAwFIy+VuiuDYcAXzMh2NZjWbs8p67VJ6uamCy536zCjPAuMadihDORflI2YsjJVF9XboA3Rl4hJRCVyQz7AuUMEt/mWxrRpacCfGD4w+nfE9kC8biTtPRNXX2CUG2lyq1oNK+Wvbky+zkRY0kLHxRtXc=
