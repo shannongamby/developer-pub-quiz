@@ -3,7 +3,7 @@ body {
 }
 
 
-#play_button {
+#play_button, #play_again{
   color: #dd3baa;
   font-size: calc(20px + 4vmin);
 }
@@ -18,53 +18,17 @@ body {
   border-radius: 15px;
   background-color: black;
 }
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+#quiz_one, #end_screen_1 {
+  color: #ffff00;
 }
 
-.questionPlayerOne {
-  color: #62f0e9;
+#quiz_two, #end_screen_2{
+  color: #66ffff;
 }
 
-#quiz_two {
-  color: #pink;
-}
-
-#quiz_one {
-  color: #38a5aa;
-}
-
-.playerOne {
-  color: pink;
-  }
-
-
-.buttons {
-  margin-bottom: 10px;
-  /* color: #62f0e9; */
+#answer {
+  margin-bottom: 7px;
   border-radius: 15px;
-  background-color: black;
-
-};
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  background-color: #333333;
+  border: none;
 }
