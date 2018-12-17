@@ -18,14 +18,6 @@ class Option extends Component {
       onAnswerSelected: nextProps.onAnswerSelected
     });
   }
-
-  method() {
-    this.props.onAnswerSelected()
-    this.props.handleQuizOneSwitch()
-    this.props.handleQuizTwoSwitch()
-  }
-
-
   render() {
     return (
         <div className="buttons" onClick={this.state.onAnswerSelected}><Button bsSize="large" bsClass="buttons">{this.state.text}</Button></div>
