@@ -12,9 +12,11 @@ class Game extends Component {
       playHidden: false,
       endScreenHidden: true,
       quizScore: 0,
-      quizTwoScore: 0
+      quizTwoScore: 0,
+      playAgainHidden: true
     }
     this.handlePlay = this.handlePlay.bind(this)
+    this.handlePlayAgain = this.handlePlayAgain.bind(this)
     this.handleQuizOneSwitch = this.handleQuizOneSwitch.bind(this)
     this.handleQuizTwoSwitch = this.handleQuizTwoSwitch.bind(this)
   }
@@ -23,6 +25,7 @@ class Game extends Component {
     const style_one = this.state.quizHidden ? {display: 'none'} : {};
     const style_two = this.state.quizTwoHidden ? {display: 'none'} : {};
     const style_three = this.state.endScreenHidden ? {display: 'none'} : {};
+    const style_four = this.state.playAgainHidden ? {display: 'none'} : {};
     return(
       <div>
       <div id='play_button' style ={style} onClick={this.handlePlay}>Play</div>
@@ -45,6 +48,9 @@ class Game extends Component {
       </div>
       <div id='end_screen_2' style ={style_three}>
         {`Player 2 Score: ${this.state.QuizTwoScore}`}
+      </div>
+      <div id='play_again' style={style_four} onClick={this.handlePlayAgain}>
+        Play Again
       </div>
       </div>
 
@@ -70,8 +76,11 @@ class Game extends Component {
   }
 
   handleQuizTwoSwitch() {
-      {this.setState({quizTwoHidden:true, endScreenHidden: false})
-    }
+    this.setState({quizTwoHidden:true, endScreenHidden:false, playAgainHidden:false})
+  }
+
+  handlePlayAgain() {
+    this.setState({quizHidden:false, endScreenHidden:true, playAgainHidden:true})
   }
 }
 
