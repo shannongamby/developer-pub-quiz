@@ -83,5 +83,4 @@ class Game extends Component {
     this.setState({quizHidden:false, endScreenHidden:true, playAgainHidden:true})
   }
 }
-
 export default Game;
