@@ -16,7 +16,6 @@ class App extends Component {
   }
 
   render() {
-    console.warn("result return here",this.state.place)
     return (
       <div className="App">
         <Game data={ quizData } />

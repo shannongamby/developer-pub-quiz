@@ -27,6 +27,7 @@ class QuizTwo extends Component {
         alert('You reached the end. Your Score: ' + newScore + '/' + numberOfQuestions)
         this.setState({ score: 0, currentIndex: 0 })
         this.props.handleQuizTwoSwitch()
+        this.props.handleQuizTwoScore(newScore)
       } else {
         this.setState({ score: newScore, currentIndex: newIndex })
       }
