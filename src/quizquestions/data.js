@@ -65,4 +65,37 @@ let quizData = [
  }
 ]
 
+// let quizDataTwo = [
+//   {
+//     question: {
+//       text: "Who was the child of a famous poet and English mathematician whom many historians consider the first programmer?"
+//     },
+//     options: [
+//       {
+//         text: "Mary Shelly",
+//         isCorrect: false
+//       },
+//       {
+//         text: "Ada Lovelace ",
+//         isCorrect: true
+//       }
+//     ]
+//   }
+//   {
+//     question: {
+//       text: "What does CSS actually stand for? '_______ Style Sheets'"
+//     },
+//     options: [
+//       {
+//         text: "Continual",
+//         isCorrect: false
+//       },
+//       {
+//         text: "Cascading",
+//         isCorrect: true
+//       }
+//     ]
+//   }
+// ]
+
 export default quizData;
