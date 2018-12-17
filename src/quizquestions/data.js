@@ -1,64 +1,133 @@
 let quizData = [
  {
    question: {
-     text: "Is the earth flat?"
+     text: "In 1947, Grace Murray Hopper recorded evidence of 'the first computer bug' in the Harvard Mark II computer's log book. Question is, what kind of bug was it?"
    },
    options: [
      {
-       text: "Yes!!!!!!!!!!!",
-       isCorrect: false
-     },
-     {
-       text: "No",
-       isCorrect: true
-     }
-   ]
- },
- {
-   question: {
-     text: "Is 1 greater than 2?"
-   },
-   options: [
-     {
-       text: "Yes",
-       isCorrect: false
-     },
-     {
-       text: "No",
-       isCorrect: true
-     }
-   ]
- },
- {
-   question: {
-     text: "What's the meaning of life?"
-   },
-   options: [
-     {
-       text: "42",
+       text: "A Moth",
        isCorrect: true
      },
      {
-       text: "147",
+       text: "A Fly",
        isCorrect: false
      },
      {
-       text: "Duck",
+       text: "A Spider",
        isCorrect: false
      }
    ]
  },
  {
    question: {
-     text: "Is Brazil in North America?"
+     text: "I define 8 different methods, including DELETE, PATCH, PUT and POST. I am stateless. I have a four letter name. What am I?"
    },
    options: [
      {
-       text: "Yes",
+       text: "AJAX",
        isCorrect: false
      },
      {
-       text: "No",
+       text: "HTTP",
+       isCorrect: true
+     },
+     {
+       text: "JSON",
+       isCorrect: false
+     }
+   ]
+ },
+ {
+   question: {
+     text: "What is the section of code called that responds to a particular interaction of the user with a GUI control?"
+   },
+   options: [
+     {
+       text: "Event Handler",
+       isCorrect: true
+     },
+     {
+       text: "A Component",
+       isCorrect: false
+     },
+     {
+       text: "Exception Handler",
+       isCorrect: false
+     }
+   ]
+ },
+ {
+   question: {
+     text: "What does CSS stand for?"
+   },
+   options: [
+     {
+       text: "Computer Style Sheets",
+       isCorrect: false
+     },
+     {
+       text: "Contextual Style Sheets",
+       isCorrect: false
+     },
+     {
+       text: "Cascading Style Sheets",
+       isCorrect: true
+     }
+   ]
+ },
+ {
+   question: {
+     text: "Who designed the Ruby programming language?"
+   },
+   options: [
+     {
+       text: "Guido van Rossum",
+       isCorrect: false
+     },
+     {
+       text: "Yukihiro Matsumoto",
+       isCorrect: true
+     },
+     {
+       text: "James Gosling",
+       isCorrect: false
+     }
+   ]
+ },
+ {
+   question: {
+     text: "What is the name of the first widely-used programming language that was developed by IBM in the mid 1950s?"
+   },
+   options: [
+     {
+       text: "Java",
+       isCorrect: false
+     },
+     {
+       text: "COBOL",
+       isCorrect: false
+     },
+     {
+       text: "Fortran",
+       isCorrect: true
+     }
+   ]
+ },
+ {
+   question: {
+     text: "Which SQL command would you use to retrieve records from the database?"
+   },
+   options: [
+     {
+       text: "TAKE",
+       isCorrect: false
+     },
+     {
+       text: "READ",
+       isCorrect: false
+     },
+     {
+       text: "SELECT",
        isCorrect: true
      }
    ]
