@@ -24,29 +24,32 @@ class Game extends Component {
     const style_two = this.state.quizTwoHidden ? {display: 'none'} : {};
     const style_three = this.state.endScreenHidden ? {display: 'none'} : {};
     return(
-      <div>
-      <div id='play_button' style ={style} onClick={this.handlePlay}>Play</div>
+    <div>
+      <div id='play_button' style ={style} onClick={this.handlePlay}>PLAY</div>
+
       <div id='quiz_one'style ={style_one}>
-      PLAYER ONE
-      <Quiz
-      data={ quizData }
-      handleQuizOneSwitch={this.handleQuizOneSwitch}
-      handleQuizScore={this.handleQuizScore.bind(this)}
-      />
+        PLAYER ONE
+        <Quiz
+        data={ quizData }
+        handleQuizOneSwitch={this.handleQuizOneSwitch}
+        handleQuizScore={this.handleQuizScore.bind(this)}
+        />
       </div>
 
-      <div id='quiz_two'style ={style_two}>PLAYER TWO
-      <QuizTwo
-      data={ quizData }
-      handleQuizTwoSwitch={this.handleQuizTwoSwitch}
-      handleQuizTwoScore={this.handleQuizTwoScore.bind(this)}/></div>
+      <div id='quiz_two'style ={style_two} className="playerOne">PLAYER TWO
+        <QuizTwo data={ quizData }
+        handleQuizTwoSwitch={this.handleQuizTwoSwitch}
+        handleQuizTwoScore={this.handleQuizTwoScore.bind(this)}/>
+      </div>
+
       <div id='end_screen_1' style ={style_three}>
         {`Player 1 Score: ${this.state.QuizScore} `}
       </div>
+
       <div id='end_screen_2' style ={style_three}>
         {`Player 2 Score: ${this.state.QuizTwoScore}`}
       </div>
-      </div>
+    </div>
 
     );
   }
@@ -70,9 +73,9 @@ class Game extends Component {
   }
 
   handleQuizTwoSwitch() {
-      {this.setState({quizTwoHidden:true, endScreenHidden: false})
-    }
+    {this.setState({quizTwoHidden:true, endScreenHidden: false})
   }
+}
 }
 
 export default Game;

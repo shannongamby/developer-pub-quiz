@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Game from './components/Game.js'
 import quizData from './quizquestions/data'
-import { Button } from 'react-bootstrap';
-
-
-
 
 class App extends Component {
   constructor(props) {

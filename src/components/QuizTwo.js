@@ -21,10 +21,10 @@ class QuizTwo extends Component {
       let numberOfQuestions = this.state.quiz.length
       let hasReachedTheEnd = newIndex >= numberOfQuestions
 
-      alert((option.isCorrect ? 'Nice!' : 'Wrong!') + ' Player 2 Score: ' + newScore)
+      // alert((option.isCorrect ? 'Nice!' : 'Wrong!') + ' Player 2 Score: ' + newScore)
 
       if(hasReachedTheEnd) {
-        alert('You reached the end. Your Score: ' + newScore + '/' + numberOfQuestions)
+        // alert('You reached the end. Your Score: ' + newScore + '/' + numberOfQuestions)
         this.setState({ score: 0, currentIndex: 0 })
         this.props.handleQuizTwoSwitch()
         this.props.handleQuizTwoScore(newScore)

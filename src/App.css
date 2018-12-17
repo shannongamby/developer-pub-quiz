@@ -1,6 +1,13 @@
 body {
-  background-color: #dddaff;
+  background-color: #000000;
 }
+
+
+#play_button {
+  color: #dd3baa;
+  font-size: calc(20px + 4vmin);
+}
+
 
 .App {
   text-align: center;
@@ -17,15 +24,29 @@ body {
   height: 40vmin;
 }
 
-.question {
+.questionPlayerOne {
   color: #62f0e9;
 }
 
+#quiz_two {
+  color: #pink;
+}
+
+#quiz_one {
+  color: #38a5aa;
+}
+
+.playerOne {
+  color: pink;
+  }
+
+
 .buttons {
   margin-bottom: 10px;
-  color: #62f0e9;
+  /* color: #62f0e9; */
   border-radius: 15px;
   background-color: black;
+
 };
 
 .App-header {
@@ -37,10 +58,6 @@ body {
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {
