@@ -15,10 +15,12 @@ class App extends Component {
   render() {
     console.log(Mapping);
     return (
+
       <div className="App">
         <Game data={ quizData } />
         <Mapping />
       </div>
+
     )
   }
 }
