@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Game from './components/Game.js'
 import quizData from './quizquestions/data'
+import Mapping from './components/Map.js'
 
 class App extends Component {
   constructor(props) {
@@ -12,9 +13,11 @@ class App extends Component {
   }
 
   render() {
+    console.log(Mapping);
     return (
       <div className="App">
         <Game data={ quizData } />
+        <Mapping />
       </div>
     )
   }
