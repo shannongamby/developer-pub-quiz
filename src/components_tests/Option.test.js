@@ -9,9 +9,9 @@ describe('<Option />', () => {
     ReactDOM.render(<Option />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
-
+  
   it('renders the text', () => {
-    const wrap = shallow(<Option text="My Custom text"/>);
-    expect(wrap.find('div').text()).toEqual('<Button />');
+    const wrap = shallow(<Option text= "<button />"/>);
+    expect(wrap.find('div').text()).toEqual('<button />');
   });
 });

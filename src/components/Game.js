@@ -26,12 +26,15 @@ class Game extends Component {
     const style_two = this.state.quizTwoHidden ? {display: 'none'} : {};
     const style_three = this.state.endScreenHidden ? {display: 'none'} : {};
     const style_four = this.state.playAgainHidden ? {display: 'none'} : {};
+
     return(
     <div>
-      <div id='play_button' style ={style} onClick={this.handlePlay}>PLAY</div>
+      <div id='play_button' style ={style} onClick={this.handlePlay}>PLAY
+      🍻
+     </div>
 
       <div id='quiz_one'style ={style_one}>
-        PLAYER ONE
+        PLAYER ONE 🍺
         <Quiz
         data={ quizData }
         handleQuizOneSwitch={this.handleQuizOneSwitch}
@@ -39,7 +42,7 @@ class Game extends Component {
         />
       </div>
 
-      <div id='quiz_two'style ={style_two} className="playerOne">PLAYER TWO
+      <div id='quiz_two'style ={style_two} className="playerOne">PLAYER TWO 🍺
         <QuizTwo data={ quizData }
         handleQuizTwoSwitch={this.handleQuizTwoSwitch}
         handleQuizTwoScore={this.handleQuizTwoScore.bind(this)}/>
@@ -53,7 +56,7 @@ class Game extends Component {
         {`Player 2 Score: ${this.state.QuizTwoScore}`}
       </div>
       <div id='play_again' style={style_four} onClick={this.handlePlayAgain}>
-        Play Again
+        Play Again 🤪
       </div>
       </div>
 
@@ -86,4 +89,5 @@ class Game extends Component {
     this.setState({quizHidden:false, endScreenHidden:true, playAgainHidden:true})
   }
 }
+
 export default Game;

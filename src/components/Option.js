@@ -18,9 +18,12 @@ class Option extends Component {
       onAnswerSelected: nextProps.onAnswerSelected
     });
   }
+
   render() {
     return (
-        <div className="buttons" onClick={this.state.onAnswerSelected}><Button bsSize="large" bsClass="buttons">{this.state.text}</Button></div>
+        <div onClick={this.state.onAnswerSelected}>
+        <button id="answer" type="button" className="btn btn-secondary btn-lg btn-block">{this.state.text}</button>
+        </div>
     );
   }
 }
