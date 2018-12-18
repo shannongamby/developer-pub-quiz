@@ -29,7 +29,7 @@ class Game extends Component {
 
     return(
     <div>
-      <div id='play_button' style ={style} onClick={this.handlePlay}>PLAY
+      <div id='play_button' style ={style} onClick={this.handlePlay}>🍻 PLAY FOR PINTS
       🍻
      </div>
 

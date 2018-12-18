@@ -7,8 +7,8 @@ class Mapping extends Component {
 
   render(){
     return(
-      <div>
-      <Map className= "Map" style={ {height: '50vh', width:'50%', margin: 'auto'}} google={this.props.google} zoom={14} initialCenter={{
+      <div className= "Map">
+      <Map style={ {height: '50vh', width:'50%'}} google={this.props.google} zoom={14} initialCenter={{
             lat: 51.517338,
             lng: -0.073279
           }}>
