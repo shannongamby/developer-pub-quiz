@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Quiz from '../components/Quiz.js'
 import QuizTwo from '../components/QuizTwo.js'
+import Map from '../components/Map'
+
 import quizData from '../quizquestions/data'
 
 class Game extends Component {
@@ -58,6 +60,8 @@ class Game extends Component {
       <div id='play_again' style={style_four} onClick={this.handlePlayAgain}>
         Play Again 🤪
       </div>
+      <div> <Map /> </div>
+
       </div>
 
     );
