@@ -87,6 +87,7 @@ class Game extends Component {
     this.setState({quizHidden:false})
     this.setState({playHidden:true})
     this.setState({quizTwoHidden:true})
+    this.setState({mapHidden:true})
     this.setState({mapButtonHidden:true})
   }
 
@@ -99,7 +100,7 @@ class Game extends Component {
   }
 
   handlePlayAgain() {
-    this.setState({quizHidden:false, endScreenHidden:true, playAgainHidden:true})
+    this.setState({quizHidden:false, endScreenHidden:true, playAgainHidden:true, mapHidden:true, mapButtonHidden:true})
   }
 
   handleMap() {
