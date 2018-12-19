@@ -23,7 +23,7 @@ body
   transform: translateY(-50%) translateX(0%);
 }
 
-#play_button, #play_again{
+#play_button, #play_again, #switch_player{
   color: #dd3baa;
   font-size: calc(20px + 4vmin);
 }
@@ -32,7 +32,7 @@ body
   font-size: calc(15px + 2vmin);
 }
 
-#play_button:hover, #play_again:hover, #map_button:hover{
+#play_button:hover, #play_again:hover, #switch_player:hover, #map_button:hover{
   background-color: blue;
 }
 

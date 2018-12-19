@@ -16,10 +16,12 @@ class Game extends Component {
       quizTwoScore: 0,
       playAgainHidden: true,
       mapHidden: true,
-      mapButtonHidden: false
+      mapButtonHidden: false,
+      switchPlayerHidden: true
     }
     this.handleMap = this.handleMap.bind(this)
     this.handlePlay = this.handlePlay.bind(this)
+    this.handleSwitchPlayer = this.handleSwitchPlayer.bind(this)
     this.handlePlayAgain = this.handlePlayAgain.bind(this)
     this.handleQuizOneSwitch = this.handleQuizOneSwitch.bind(this)
     this.handleQuizTwoSwitch = this.handleQuizTwoSwitch.bind(this)
@@ -32,6 +34,7 @@ class Game extends Component {
     const style_four = this.state.playAgainHidden ? {display: 'none'} : {};
     const style_five = this.state.mapHidden ? {display: 'none'} : {};
     const style_six = this.state.mapButtonHidden ? {display: 'none'} : {};
+    const style_seven = this.state.switchPlayerHidden ? {display: 'none'} : {};
 
     return(
     <div>
@@ -42,16 +45,22 @@ class Game extends Component {
      </div>
 
       <div id='quiz_one'style ={style_one}>
-        PLAYER ONE <span role="img" aria-label="two_beers">🍺</span>
+        PLAYER ONE
+        <span role="img" aria-label="beer"> 🍺</span>
         <Quiz
         data={ quizData }
         handleQuizOneSwitch={this.handleQuizOneSwitch}
         handleQuizScore={this.handleQuizScore.bind(this)}
         />
       </div>
-
-      <div id='quiz_two'style ={style_two}>PLAYER TWO <span role="img" aria-label="two_beers">🍺</span>
-        <QuizTwo data={ quizData }
+      <div id='switch_player' style={style_seven} onClick={this.handleSwitchPlayer} className="btn btn-lg btn-block">
+        SWITCH PLAYER
+      </div>
+      <div id='quiz_two'style ={style_two}>
+        PLAYER TWO
+        <span role="img" aria-label="beer"> 🍺</span>
+        <QuizTwo
+        data={ quizData }
         handleQuizTwoSwitch={this.handleQuizTwoSwitch}
         handleQuizTwoScore={this.handleQuizTwoScore.bind(this)}/>
       </div>
@@ -62,8 +71,9 @@ class Game extends Component {
 
       <div id='end_screen_2' style ={style_three}>
         {`Player 2 Score: ${this.state.quizTwoScore}`}
+        {''}
       </div>
-      <div id='play_again' style={style_four} onClick={this.handlePlayAgain}>
+      <div id='play_again' style={style_four} className="btn btn-lg btn-block" onClick={this.handlePlayAgain}>
         Play Again <span role="img" aria-label="zany face">🤪</span>
       </div>
 
@@ -95,7 +105,11 @@ class Game extends Component {
   }
 
   handleQuizOneSwitch() {
-    this.setState({quizHidden:true, quizTwoHidden:false})
+    this.setState({quizHidden:true, switchPlayerHidden:false})
+  }
+
+  handleSwitchPlayer() {
+    this.setState({quizTwoHidden:false, switchPlayerHidden:true})
   }
 
   handleQuizTwoSwitch() {
