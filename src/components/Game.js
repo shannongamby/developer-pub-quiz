@@ -34,8 +34,9 @@ class Game extends Component {
     return(
     <div>
       <div id='play_button' className="btn btn-lg btn-block" style ={style} onClick={this.handlePlay}>
-
+      <span role="img" aria-label="two_beers">🍻 </span>
       PLAY FOR PINTS
+      <span role="img" aria-label="two_beers"> 🍻</span>
      </div>
 
       <div id='quiz_one'style ={style_one}>
