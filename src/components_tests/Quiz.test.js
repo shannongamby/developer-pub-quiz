@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Quiz from '../components/Quiz';
+import Game from '../components/Game';
+import quizdata from '../quizquestions/data'
 import { shallow, mount, render } from 'enzyme';
 
 let testData = [
@@ -49,7 +51,6 @@ it('renders the first question', () => {
   const wrap = shallow(<Quiz data={testData} />)
 
   expect(wrap.find('Question').prop('text')).toEqual('Question 1')
-
   expect(wrap.find('Option').length).toEqual(3);
   expect(wrap.find('Option').at(0).prop('text')).toEqual('Question 1 - Option 1')
   expect(wrap.find('Option').at(1).prop('text')).toEqual('Question 1 - Option 2')
@@ -57,16 +58,11 @@ it('renders the first question', () => {
 });
 
 
-// NEED TO MOCK RANDOM
-// it('renders the second question after replying to the first question', () => {
-//   window.alert = jest.fn(); // ignore alerts since we're not running the tests in a real browser
-//
-//   const wrap = shallow(<Quiz data={testData} />)
-//
-//   wrap.find('Option').at(0).prop('onAnswerSelected')()
-//
-//   expect(wrap.find('Question').prop('text')).toEqual('Question 2')
-//   expect(wrap.find('Option').length).toEqual(2);
-//   expect(wrap.find('Option').at(0).prop('text')).toEqual('Question 2 - Option 1')
-//   expect(wrap.find('Option').at(1).prop('text')).toEqual('Question 2 - Option 2')
-// });
+
+it('renders the second question after replying to the first question', () => {
+  const wrap = shallow(<Quiz data={quizdata} />)
+  wrap.find('Option').at(0).prop('onAnswerSelected')()
+
+  expect(typeof wrap.find('Question').prop('text')).toBe('string')
+  expect(typeof wrap.find('Option').at(0).prop('text')).toBe('string')
+});
