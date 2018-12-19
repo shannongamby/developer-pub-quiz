@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Quiz from '../components/Quiz.js'
-import QuizTwo from '../components/QuizTwo.js'
 import quizData from '../quizquestions/data'
 import Mapping from '../components/Map.js'
 
@@ -49,7 +48,7 @@ class Game extends Component {
         <span role="img" aria-label="beer"> 🍺</span>
         <Quiz
         data={ quizData }
-        handleQuizOneSwitch={this.handleQuizOneSwitch}
+        handleQuizSwitch={this.handleQuizOneSwitch}
         handleQuizScore={this.handleQuizScore.bind(this)}
         />
       </div>
@@ -59,10 +58,10 @@ class Game extends Component {
       <div id='quiz_two'style ={style_two}>
         PLAYER TWO
         <span role="img" aria-label="beer"> 🍺</span>
-        <QuizTwo
+        <Quiz
         data={ quizData }
-        handleQuizTwoSwitch={this.handleQuizTwoSwitch}
-        handleQuizTwoScore={this.handleQuizTwoScore.bind(this)}/>
+        handleQuizSwitch={this.handleQuizTwoSwitch}
+        handleQuizScore={this.handleQuizTwoScore.bind(this)}/>
       </div>
 
       <div id='end_screen_1' style ={style_three}>
