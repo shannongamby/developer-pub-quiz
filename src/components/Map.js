@@ -6,7 +6,7 @@ const mapApi = process.env.REACT_APP_API_KEY;
 class Mapping extends Component {
 
   state = {
-    // showingInfoWindow: false,
+    showingInfoWindow: false,
     activeMarker: {},
     selectedPlace: {},
   };
@@ -15,7 +15,7 @@ class Mapping extends Component {
     this.setState({
       selectedPlace: props,
       activeMarker: marker,
-      // showingInfoWindow: true
+      showingInfoWindow: true
     });
 
   onMapClicked = (props) => {
@@ -40,7 +40,7 @@ class Mapping extends Component {
 
       <Marker onClick={this.onMarkerClick}
               name={'The Culpepper'}
-              position={{lat: 51.5177141, lng: -0.0743158}} />
+              position={{lat: 51.5168721, lng: -0.0730934}} />
       <Marker onClick={this.onMarkerClick}
               name={'Apples & Pears Bar'}
               position={{lat: 51.5169396, lng: -0.070203}} />
@@ -105,7 +105,7 @@ class Mapping extends Component {
       marker={this.state.activeMarker}
       visible={true}>
         <div>
-          <h6>{this.state.selectedPlace.name}</h6>
+          <h6>🍺{this.state.selectedPlace.name}🍺</h6>
         </div>
       </InfoWindow>
       </Map>
