@@ -15,7 +15,8 @@ class Game extends Component {
       quizScore: 0,
       quizTwoScore: 0,
       playAgainHidden: true,
-      mapHidden: true
+      mapHidden: true,
+      mapButtonHidden: false
     }
     this.handleMap = this.handleMap.bind(this)
     this.handlePlay = this.handlePlay.bind(this)
@@ -30,6 +31,7 @@ class Game extends Component {
     const style_three = this.state.endScreenHidden ? {display: 'none'} : {};
     const style_four = this.state.playAgainHidden ? {display: 'none'} : {};
     const style_five = this.state.mapHidden ? {display: 'none'} : {};
+    const style_six = this.state.mapButtonHidden ? {display: 'none'} : {};
 
     return(
     <div>
@@ -64,7 +66,8 @@ class Game extends Component {
       <div id='play_again' style={style_four} onClick={this.handlePlayAgain}>
         Play Again 🤪
       </div>
-      <div id='map_button' className="btn btn-lg btn-block" onClick={this.handleMap}>
+
+      <div id='map_button' className="btn btn-lg btn-block" style={style_six} onClick={this.handleMap}>
         PUBS NEAR ME
       </div>
         <div style={style_five}>
@@ -87,6 +90,7 @@ class Game extends Component {
     this.setState({quizHidden:false})
     this.setState({playHidden:true})
     this.setState({quizTwoHidden:true})
+    this.setState({mapButtonHidden:true})
   }
 
   handleQuizOneSwitch() {
@@ -94,7 +98,7 @@ class Game extends Component {
   }
 
   handleQuizTwoSwitch() {
-    this.setState({quizTwoHidden:true, endScreenHidden:false, playAgainHidden:false})
+    this.setState({quizTwoHidden:true, endScreenHidden:false, playAgainHidden:false, mapButtonHidden:false})
   }
 
   handlePlayAgain() {
