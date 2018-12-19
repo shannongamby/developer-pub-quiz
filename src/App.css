@@ -20,6 +20,14 @@ body {
   color: #dd3baa;
   font-size: calc(20px + 4vmin);
 }
+#map_button{
+  color: #dd3baa;
+  font-size: calc(15px + 2vmin);
+}
+
+#play_button:hover, #play_again:hover, #map_button:hover{
+  background-color: blue;
+}
 
 #quiz_one, #end_screen_1 {
   color: #ffff00;
