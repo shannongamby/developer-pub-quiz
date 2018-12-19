@@ -30,7 +30,7 @@ class Mapping extends Component {
   render(){
     return(
       <div className= "Map">
-      <Map style= {{ height: '70vh', width: '97.5%'}} google={this.props.google} zoom={14} initialCenter={{
+      <Map style= {{ height: '70vh', width: '98.3%'}} google={this.props.google} zoom={14} initialCenter={{
             lat: 51.517338,
             lng: -0.073279
           }}>
