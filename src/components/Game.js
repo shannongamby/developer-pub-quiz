@@ -33,8 +33,9 @@ class Game extends Component {
 
     return(
     <div>
-      <div id='play_button' style ={style} onClick={this.handlePlay}>🍻 PLAY FOR PINTS
-      🍻
+      <div id='play_button' className="btn btn-lg btn-block" style ={style} onClick={this.handlePlay}>
+
+      PLAY FOR PINTS
      </div>
 
       <div id='quiz_one'style ={style_one}>
@@ -62,7 +63,7 @@ class Game extends Component {
       <div id='play_again' style={style_four} onClick={this.handlePlayAgain}>
         Play Again 🤪
       </div>
-      <div id='map_button' onClick={this.handleMap}>
+      <div id='map_button' className="btn btn-lg btn-block" onClick={this.handleMap}>
         PUBS NEAR ME
       </div>
         <div style={style_five}>
