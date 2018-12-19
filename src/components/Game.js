@@ -42,7 +42,7 @@ class Game extends Component {
      </div>
 
       <div id='quiz_one'style ={style_one}>
-        PLAYER ONE 🍺
+        PLAYER ONE <span role="img" aria-label="two_beers">🍺</span>
         <Quiz
         data={ quizData }
         handleQuizOneSwitch={this.handleQuizOneSwitch}
@@ -50,7 +50,7 @@ class Game extends Component {
         />
       </div>
 
-      <div id='quiz_two'style ={style_two}>PLAYER TWO 🍺
+      <div id='quiz_two'style ={style_two}>PLAYER TWO <span role="img" aria-label="two_beers">🍺</span>
         <QuizTwo data={ quizData }
         handleQuizTwoSwitch={this.handleQuizTwoSwitch}
         handleQuizTwoScore={this.handleQuizTwoScore.bind(this)}/>
@@ -64,7 +64,7 @@ class Game extends Component {
         {`Player 2 Score: ${this.state.quizTwoScore}`}
       </div>
       <div id='play_again' style={style_four} onClick={this.handlePlayAgain}>
-        Play Again 🤪
+        Play Again <span role="img" aria-label="zany face">🤪</span>
       </div>
 
       <div id='map_button' className="btn btn-lg btn-block" style={style_six} onClick={this.handleMap}>
