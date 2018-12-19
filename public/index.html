@@ -7,55 +7,12 @@
     <meta name="theme-color" content="#000000">
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body>
-    <title>React App</title>
-    <div id="root"></div>
-    <div id="map" style="margin:auto;width:75%;height:500px;"></div>
-    <script>
-    var map;
-    var infowindow;
 
-    function initMap() {
-      var makers = {lat: 51.517338, lng: -0.073279};
-
-
-      map = new google.maps.Map(document.getElementById('map'), {
-        center: makers,
-        zoom: 15
-      });
-
-      infowindow = new google.maps.InfoWindow();
-      var service = new google.maps.places.PlacesService(map);
-      service.nearbySearch({
-        location: makers,
-        radius: 500,
-        type: ['bar']
-      }, callback);
-    }
-
-    function callback(results, status) {
-      if (status === google.maps.places.PlacesServiceStatus.OK) {
-        for (var i = 0; i < results.length; i++) {
-          createMarker(results[i]);
-        }
-      }
-    }
-
-    function createMarker(place) {
-      var placeLoc = place.geometry.location;
-      var marker = new google.maps.Marker({
-        map: map,
-        position: place.geometry.location
-      });
-
-      google.maps.event.addListener(marker, 'click', function() {
-        infowindow.setContent(place.name);
-        infowindow.open(map, this);
-      });
-    }
-    </script>
-    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap"></script> -->
-
+  <body class="container-fluid" >
+    <title>🍺Developers Pub Quiz</title>
+    <div class="container-fluid" id="root"></div>
   </body>
+
 </html>

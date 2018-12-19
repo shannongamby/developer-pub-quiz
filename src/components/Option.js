@@ -22,7 +22,7 @@ class Option extends Component {
   render() {
     return (
         <div onClick={this.state.onAnswerSelected}>
-        <button id="answer" type="button" className="btn btn-secondary btn-lg btn-block">{this.state.text}</button>
+        <button id="answer" type="button" className="btn btn-primary btn-lg btn-block">{this.state.text}</button>
         </div>
     );
   }

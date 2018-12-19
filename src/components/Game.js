@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Quiz from '../components/Quiz.js'
 import QuizTwo from '../components/QuizTwo.js'
 import quizData from '../quizquestions/data'
+import Mapping from '../components/Map.js'
 
 class Game extends Component {
   constructor(props){
@@ -13,8 +14,11 @@ class Game extends Component {
       endScreenHidden: true,
       quizScore: 0,
       quizTwoScore: 0,
-      playAgainHidden: true
+      playAgainHidden: true,
+      mapHidden: true,
+      mapButtonHidden: false
     }
+    this.handleMap = this.handleMap.bind(this)
     this.handlePlay = this.handlePlay.bind(this)
     this.handlePlayAgain = this.handlePlayAgain.bind(this)
     this.handleQuizOneSwitch = this.handleQuizOneSwitch.bind(this)
@@ -26,11 +30,15 @@ class Game extends Component {
     const style_two = this.state.quizTwoHidden ? {display: 'none'} : {};
     const style_three = this.state.endScreenHidden ? {display: 'none'} : {};
     const style_four = this.state.playAgainHidden ? {display: 'none'} : {};
+    const style_five = this.state.mapHidden ? {display: 'none'} : {};
+    const style_six = this.state.mapButtonHidden ? {display: 'none'} : {};
 
     return(
     <div>
-      <div id='play_button' style ={style} onClick={this.handlePlay}>PLAY
-      🍻
+      <div id='play_button' className="btn btn-lg btn-block" style ={style} onClick={this.handlePlay}>
+      <span role="img" aria-label="two_beers">🍻 </span>
+      PLAY FOR PINTS
+      <span role="img" aria-label="two_beers"> 🍻</span>
      </div>
 
       <div id='quiz_one'style ={style_one}>
@@ -42,39 +50,47 @@ class Game extends Component {
         />
       </div>
 
-      <div id='quiz_two'style ={style_two} className="playerOne">PLAYER TWO 🍺
+      <div id='quiz_two'style ={style_two}>PLAYER TWO 🍺
         <QuizTwo data={ quizData }
         handleQuizTwoSwitch={this.handleQuizTwoSwitch}
         handleQuizTwoScore={this.handleQuizTwoScore.bind(this)}/>
       </div>
 
       <div id='end_screen_1' style ={style_three}>
-        {`Player 1 Score: ${this.state.QuizScore} `}
+        {`Player 1 Score: ${this.state.quizScore} `}
       </div>
 
       <div id='end_screen_2' style ={style_three}>
-        {`Player 2 Score: ${this.state.QuizTwoScore}`}
+        {`Player 2 Score: ${this.state.quizTwoScore}`}
       </div>
       <div id='play_again' style={style_four} onClick={this.handlePlayAgain}>
         Play Again 🤪
       </div>
+
+      <div id='map_button' className="btn btn-lg btn-block" style={style_six} onClick={this.handleMap}>
+        PUBS NEAR ME
+      </div>
+        <div style={style_five}>
+          <Mapping />
+        </div>
       </div>
 
     );
   }
 
   handleQuizScore(score) {
-    this.setState({QuizScore:score})
+    this.setState({quizScore:score})
   }
 
   handleQuizTwoScore(score) {
-    this.setState({QuizTwoScore:score})
+    this.setState({quizTwoScore:score})
   }
 
-  handlePlay(){
+  handlePlay() {
     this.setState({quizHidden:false})
     this.setState({playHidden:true})
     this.setState({quizTwoHidden:true})
+    this.setState({mapButtonHidden:true})
   }
 
   handleQuizOneSwitch() {
@@ -82,11 +98,15 @@ class Game extends Component {
   }
 
   handleQuizTwoSwitch() {
-    this.setState({quizTwoHidden:true, endScreenHidden:false, playAgainHidden:false})
+    this.setState({quizTwoHidden:true, endScreenHidden:false, playAgainHidden:false, mapButtonHidden:false})
   }
 
   handlePlayAgain() {
     this.setState({quizHidden:false, endScreenHidden:true, playAgainHidden:true})
+  }
+
+  handleMap() {
+    this.state.mapHidden === true ? this.setState({mapHidden:false}) : this.setState({mapHidden:true})
   }
 }
 

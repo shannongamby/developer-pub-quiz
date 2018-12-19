@@ -1,20 +1,39 @@
-body {
-  background-color: #000000;
-}
+body
+  {
+    padding : 20px;
+    background: black;
+    text-align: center;
+    font-family: 'arial';
+    top: 50%;
+    left: 50%;
+  }
 
 .App {
   text-align: center;
-  margin-top: 25px;
-  margin-left: 50px;
-  margin-right: 50px;
+  margin: 0 auto 0 auto;
   padding: 10px;
-  border-radius: 15px;
   background-color: black;
+}
+.Map {
+  margin: 0 auto 0 auto;
+
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(0%);
 }
 
 #play_button, #play_again{
   color: #dd3baa;
   font-size: calc(20px + 4vmin);
+}
+#map_button{
+  color: #dd3baa;
+  font-size: calc(15px + 2vmin);
+}
+
+#play_button:hover, #play_again:hover, #map_button:hover{
+  background-color: blue;
 }
 
 #quiz_one, #end_screen_1 {
@@ -30,4 +49,8 @@ body {
   border-radius: 15px;
   background-color: #333333;
   border: none;
+  outline: none;
+}
+#answer:hover {
+  background-color: purple;
 }
