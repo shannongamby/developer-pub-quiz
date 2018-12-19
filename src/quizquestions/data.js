@@ -1,7 +1,7 @@
 let quizData = [
  {
    question: {
-     text: "In 1947, Grace Murray Hopper recorded evidence of 'the first computer bug' in the Harvard Mark II computer's log book. Question is, what kind of bug was it?"
+     text: "In 1947, Grace Murray Hopper recorded evidence of 'the first computer bug'. Question is, what kind of bug was it?"
    },
    options: [
      {
@@ -115,7 +115,7 @@ let quizData = [
  },
  {
    question: {
-     text: "Which SQL command would you use to retrieve records from the database?"
+     text: "Which SQL command would you use to retrieve records from a database?"
    },
    options: [
      {
