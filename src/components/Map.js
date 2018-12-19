@@ -2,13 +2,30 @@ import React, { Component } from 'react';
 import {Map, InfoWindow, Marker, GoogleApiWrapper} from 'google-maps-react';
 
 const mapApi = process.env.REACT_APP_API_KEY;
-let testMark;
 
 class Mapping extends Component {
 
-  testMark = function marker(name, lat, lng) {
+  state = {
+    // showingInfoWindow: false,
+    activeMarker: {},
+    selectedPlace: {},
+  };
 
-  }
+  onMarkerClick = (props, marker, e) =>
+    this.setState({
+      selectedPlace: props,
+      activeMarker: marker,
+      // showingInfoWindow: true
+    });
+
+  onMapClicked = (props) => {
+    if (this.state.showingInfoWindow) {
+      this.setState({
+        showingInfoWindow: false,
+        activeMarker: null
+      })
+    }
+  };
 
   render(){
     return(
@@ -21,50 +38,75 @@ class Mapping extends Component {
       <Marker onClick={this.onMarkerClick}
             name={'Current location'} />
 
-      <Marker name={'The Culpepper'}
+      <Marker onClick={this.onMarkerClick}
+              name={'The Culpepper'}
               position={{lat: 51.5177141, lng: -0.0743158}} />
-      <Marker name={'Apples & Pears Bar'}
+      <Marker onClick={this.onMarkerClick}
+              name={'Apples & Pears Bar'}
               position={{lat: 51.5169396, lng: -0.070203}} />
-      <Marker name={'The Grocer'}
+      <Marker onClick={this.onMarkerClick}
+              name={'The Grocer'}
               position={{lat: 51.5200787, lng: -0.0762836}} />
-      <Marker name={'The Astronomer'}
+      <Marker onClick={this.onMarkerClick}
+              name={'The Astronomer'}
               position={{lat: 51.5179399, lng: -0.0788903}} />
-      <Marker name={'The Magpie'}
+      <Marker onClick={this.onMarkerClick}
+              name={'The Magpie'}
               position={{lat: 51.5171484, lng: -0.0791323}} />
-      <Marker name={'Leman Street Tavern'}
+      <Marker onClick={this.onMarkerClick}
+              name={'Leman Street Tavern'}
               position={{lat: 51.5138466, lng: -0.0705016}} />
-      <Marker name={"Goodman's Field"}
+      <Marker onClick={this.onMarkerClick}
+              name={"Goodman's Field"}
               position={{lat: 51.5114809, lng: -0.0728171}} />
-      <Marker name={"The Ten Bells"}
+      <Marker onClick={this.onMarkerClick}
+              name={"The Ten Bells"}
               position={{lat: 51.519358, lng: -0.0743816}} />
-      <Marker name={"The Pride of Spitalfields"}
+      <Marker onClick={this.onMarkerClick}
+              name={"The Pride of Spitalfields"}
               position={{lat: 51.5189067, lng: -0.0712574}} />
-      <Marker name={"The Golden Hart"}
+      <Marker onClick={this.onMarkerClick}
+              name={"The Golden Hart"}
               position={{lat: 51.5201174, lng: -0.0742873}} />
-      <Marker name={"The Diner Spitalfields"}
+      <Marker onClick={this.onMarkerClick}
+              name={"The Diner Spitalfields"}
               position={{lat: 51.51948, lng: -0.075858}} />
-      <Marker name={"The Williams Ale & Cider House"}
+      <Marker onClick={this.onMarkerClick}
+              name={"The Williams Ale & Cider House"}
               position={{lat: 51.5183664, lng: -0.0784902}} />
-      <Marker name={"The Bell"}
+      <Marker onClick={this.onMarkerClick}
+              name={"The Bell"}
               position={{lat: 51.5158898, lng: -0.0757336}} />
-      <Marker name={"The Hoop and Grapes"}
+      <Marker onClick={this.onMarkerClick}
+              name={"The Hoop and Grapes"}
               position={{lat: 51.5142071, lng: -0.0741732}} />
-      <Marker name={"Alice"}
+      <Marker onClick={this.onMarkerClick}
+              name={"Alice"}
               position={{lat: 51.5150812, lng: -0.0781154}} />
-      <Marker name={"The Bull"}
+      <Marker onClick={this.onMarkerClick}
+              name={"The Bull"}
               position={{lat: 51.5169543, lng: -0.0804983}} />
-      <Marker name={"Grapeshots"}
+      <Marker onClick={this.onMarkerClick}
+              name={"Grapeshots"}
               position={{lat: 51.5180593, lng: -0.0775255}} />
-      <Marker name={"Kings Stores"}
+      <Marker onClick={this.onMarkerClick}
+              name={"Kings Stores"}
               position={{lat: 51.5179809, lng: -0.0778893}} />
-      <Marker name={"Dirty Dicks"}
+      <Marker onClick={this.onMarkerClick}
+              name={"Dirty Dicks"}
               position={{lat: 51.5180407, lng: -0.0796184}} />
-      <Marker name={"The Water Poet"}
+      <Marker onClick={this.onMarkerClick}
+              name={"The Water Poet"}
               position={{lat: 51.5210245, lng: -0.0779423}} />
-      <Marker name={"The Crown and Shuttle"}
+      <Marker onClick={this.onMarkerClick}
+              name={"The Crown and Shuttle"}
               position={{lat: 51.5224531, lng: -0.078184}} />
-      <InfoWindow onClose={this.onInfoWindowClose}>
-
+      <InfoWindow onClose={this.onInfoWindowClose}
+      marker={this.state.activeMarker}
+      visible={true}>
+        <div>
+          <h6>{this.state.selectedPlace.name}</h6>
+        </div>
       </InfoWindow>
       </Map>
       </div>
