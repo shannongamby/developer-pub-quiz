@@ -1,7 +1,7 @@
 body
   {
     padding : 20px;
-    background: black;
+    background: #ADCCF6;
     text-align: center;
     font-family: 'arial';
     top: 50%;
@@ -12,7 +12,7 @@ body
   text-align: center;
   margin: 0 auto 0 auto;
   padding: 10px;
-  background-color: black;
+  background-color: #ADCCF6;
 }
 .Map {
   margin: 0 auto 0 auto;
@@ -24,24 +24,32 @@ body
 }
 
 #play_button, #play_again, #switch_player{
-  color: #dd3baa;
+  color: white;
   font-size: calc(20px + 4vmin);
 }
 #map_button{
-  color: #dd3baa;
+  color: white;
   font-size: calc(15px + 2vmin);
 }
 
 #play_button:hover, #play_again:hover, #switch_player:hover, #map_button:hover{
-  background-color: blue;
+  background-color: #8D79CD;
 }
 
 #quiz_one, #end_screen_1 {
-  color: #ffff00;
+  color: white;
 }
 
-#quiz_two, #end_screen_2{
-  color: #66ffff;
+#quiz_two, #end_screen_2 {
+  color: white;
+}
+
+#end_screen_1, #end_screen_2 {
+  font-size: calc(10px + 2vmin);
+}
+
+#quiz_one, #quiz_two {
+  margin-top: 150px;
 }
 
 #answer {
