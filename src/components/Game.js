@@ -79,7 +79,8 @@ class Game extends Component {
       </div>
 
       <div id='play_again' style={play_again_button_style} className="btn btn-lg btn-block" onClick={this.handlePlayAgain}>
-        Play Again <span role="img" aria-label="zany face">🤪</span>
+        Play Again
+        <span role="img" aria-label="zany face"> 🤪</span>
       </div>
 
       <div id='map_button' className="btn btn-lg btn-block" style={map_button_style} onClick={this.handleMap}>
