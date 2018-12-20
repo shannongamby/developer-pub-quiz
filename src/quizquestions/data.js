@@ -302,6 +302,101 @@ let quizData = [
        isCorrect: false
      }
    ]
+ },
+ {
+   question: {
+     text: "Which of the following is not a programming language?"
+   },
+   options: [
+     {
+       text: "Groovy",
+       isCorrect: false
+     },
+     {
+       text: "APL",
+       isCorrect: false
+     },
+     {
+       text: "AJAX",
+       isCorrect: true
+     }
+   ]
+ },
+ {
+   question: {
+     text: "What type of memory is used to temporarily store information that the computer is currently working with?"
+   },
+   options: [
+     {
+       text: "RAM",
+       isCorrect: true
+     },
+     {
+       text: "ROM",
+       isCorrect: false
+     },
+     {
+       text: "RUM",
+       isCorrect: false
+     }
+   ]
+ },
+ {
+   question: {
+     text: "Who developed React?"
+   },
+   options: [
+     {
+       text: "Twitter",
+       isCorrect: false
+     },
+     {
+       text: "Facebook",
+       isCorrect: true
+     },
+     {
+       text: "Tumblr",
+       isCorrect: false
+     }
+   ]
+ },
+ {
+   question: {
+     text: "What does DOM stand for?"
+   },
+   options: [
+     {
+       text: "Document Oriented Model",
+       isCorrect: false
+     },
+     {
+       text: "Document Object Model",
+       isCorrect: true
+     },
+     {
+       text: "Document Object Map",
+       isCorrect: false
+     }
+   ]
+ },
+ {
+   question: {
+     text: "'Linux' is an example of what?"
+   },
+   options: [
+     {
+       text: "Programming Language",
+       isCorrect: false
+     },
+     {
+       text: "Browser",
+       isCorrect: false
+     },
+     {
+       text: "Operating System",
+       isCorrect: true
+     }
+   ]
  }
 ]
 
