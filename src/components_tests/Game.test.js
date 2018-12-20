@@ -68,4 +68,23 @@ describe('<Game/>', () => {
     expect(wrap.find('#end_screen_2').prop('style')).toHaveProperty('display', 'none')
     expect(wrap.find('#play_again').prop('style')).toHaveProperty('display', 'none')
   });
+
+
+    it('renders quiz 2 after switch player is clicked', () => {
+      const wrap = shallow( <Game data={ quizData } />)
+
+      wrap.find('#play_button').simulate('click')
+
+      wrap.find('#quiz_one Quiz').at(0).prop('handleQuizSwitch')()
+
+      wrap.find('#switch_player').simulate('click')
+
+      expect(wrap.find('#play_button').prop('style')).toHaveProperty('display', 'none')
+      expect(wrap.find('#quiz_one').prop('style')).toHaveProperty('display', 'none')
+      expect(wrap.find('#switch_player').prop('style')).toHaveProperty('display', 'none')
+      expect(wrap.find('#quiz_two').prop('style')).not.toHaveProperty('display', 'none')
+      expect(wrap.find('#end_screen_1').prop('style')).toHaveProperty('display', 'none')
+      expect(wrap.find('#end_screen_2').prop('style')).toHaveProperty('display', 'none')
+      expect(wrap.find('#play_again').prop('style')).toHaveProperty('display', 'none')
+    });
 });
