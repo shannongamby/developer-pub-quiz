@@ -11,7 +11,10 @@ class Quiz extends Component {
       currentIndex: 0,
       score: 0,
       length: 4,
-      count: 0
+      count: 0,
+      random: props.random ? props.random : function() {
+        return  Math.round((Math.random() * 20))
+      }
     }
   }
 
@@ -19,7 +22,7 @@ class Quiz extends Component {
     return () => {
       this.setState({count: this.state.count + 1})
       let newScore = this.state.score + (option.isCorrect ? 1 : 0)
-      let newIndex = Math.round((Math.random() * 20))
+      let newIndex = this.state.random()
       let numberOfQuestions = this.state.length
       let hasReachedTheEnd = this.state.count >= numberOfQuestions
 
