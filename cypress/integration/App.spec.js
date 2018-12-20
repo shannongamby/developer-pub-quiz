@@ -18,14 +18,12 @@ context('App', () => {
   })
 
   it('Starts the quiz for Player 1', () => {
-    // https://on.cypress.io/focus
     cy.contains('PLAY FOR PINTS').click()
 
     cy.contains('PLAYER ONE').should('be.visible')
   })
 
   it('Moves onto the next question', () => {
-    // https://on.cypress.io/focus
     cy.contains('PLAY FOR PINTS').click()
 
     cy.contains('A Fly').click()
@@ -34,7 +32,6 @@ context('App', () => {
   })
 
   it('Moves to switch player page', () => {
-    // https://on.cypress.io/focus
     cy.contains('PLAY FOR PINTS').click()
 
     cy.contains('A Fly').click()
@@ -49,7 +46,6 @@ context('App', () => {
 
 
   it('Switches to Player 2', () => {
-    // https://on.cypress.io/focus
     cy.contains('PLAY FOR PINTS').click()
 
     cy.contains('A Fly').click()
