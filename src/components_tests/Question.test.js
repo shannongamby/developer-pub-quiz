@@ -14,4 +14,12 @@ describe('<Question />', () => {
     const wrap = shallow(<Question text="My custom text" />)
     expect(wrap.find('div').text()).toEqual("My custom text")
   });
+
+  it('rerenders with new props', () => {
+    const wrap = shallow(<Question text="My custom text" />)
+
+    wrap.setProps({ text: "Another custom text" })
+
+    expect(wrap.find('div').text()).toEqual('Another custom text')
+  });
 });

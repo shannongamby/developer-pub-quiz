@@ -43,7 +43,7 @@ class Game extends Component {
         <span role="img" aria-label="two_beers"> 🍻</span>
      </div>
 
-      <div id='quiz_one'style={quiz_one_style}>
+      <div id='quiz_one' style={quiz_one_style}>
         PLAYER ONE
         <span role="img" aria-label="beer"> 🍺</span>
         <Quiz
@@ -112,6 +112,7 @@ class Game extends Component {
 
   handleQuizOneSwitch() {
     this.setState({quizHidden:true, switchPlayerHidden:false})
+    console.log("Show me ")
   }
 
   handleSwitchPlayer() {
