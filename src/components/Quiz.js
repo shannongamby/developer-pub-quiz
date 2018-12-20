@@ -26,7 +26,7 @@ class Quiz extends Component {
       if(hasReachedTheEnd) {
         this.props.handleQuizScore(newScore)
         this.setState({ score: 0, currentIndex: 0, count: 0 })
-        this.props.handleQuizOneSwitch()
+        this.props.handleQuizSwitch()
       } else {
         this.setState({ score: newScore, currentIndex: newIndex })
       }

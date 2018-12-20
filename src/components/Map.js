@@ -215,7 +215,7 @@ class Mapping extends Component {
         marker={this.state.activeMarker}
         visible={true}>
         <div>
-          <h6><span role="img" aria-label="two_beers">🍺</span>{this.state.selectedPlace.name} <span role="img" aria-label="two_beers">🍺</span></h6>
+          <h6><span role="img" aria-label="beer">🍺</span>{this.state.selectedPlace.name} <span role="img" aria-label="beer">🍺</span></h6>
         </div>
         </InfoWindow>
         </Map>
