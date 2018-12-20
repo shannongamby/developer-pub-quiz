@@ -45,7 +45,7 @@ class Mapping extends Component {
 
       <Marker onClick={this.onMarkerClick}
         name={'The Culpepper'}
-        position={{lat: 51.5168721, lng: -0.0730934}}
+        position={{lat: 51.5168247, lng: -0.0722957}}
         icon={{
           url: require('../img/beer-pin.png'),
           scaledSize: { width: 30, height: 30},
