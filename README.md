@@ -25,9 +25,10 @@ Clone this repo and then run:
 ```
 $ npm install
 ```
-### To run tests:
+### To run unit tests and feature tests:
 ```
 yarn test
+yarn feature-test
 ```
 ### To run linting:
 ```
