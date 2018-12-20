@@ -24,4 +24,18 @@ describe('<Game/>', () => {
     expect(wrap.find('#play_again').prop('style')).toHaveProperty('display', 'none')
 
   });
+  
+  it('renders quiz one when click play for pints', () => {
+    const wrap = shallow( <Game data={ quizData } />)
+
+    wrap.find('#play_button').simulate('click')
+
+    expect(wrap.find('#play_button').prop('style')).toHaveProperty('display', 'none')
+    expect(wrap.find('#quiz_one').prop('style')).not.toHaveProperty('display', 'none')
+    expect(wrap.find('#switch_player').prop('style')).toHaveProperty('display', 'none')
+    expect(wrap.find('#quiz_two').prop('style')).toHaveProperty('display', 'none')
+    expect(wrap.find('#end_screen_1').prop('style')).toHaveProperty('display', 'none')
+    expect(wrap.find('#end_screen_2').prop('style')).toHaveProperty('display', 'none')
+    expect(wrap.find('#play_again').prop('style')).toHaveProperty('display', 'none')
+  });
 });
