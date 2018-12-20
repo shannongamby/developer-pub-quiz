@@ -86,7 +86,7 @@ class Game extends Component {
         PUBS NEAR ME
       </div>
 
-        <div style={map_style}>
+        <div id='map_check' style={map_style}>
           <Mapping />
         </div>
     </div>
