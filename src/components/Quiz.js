@@ -13,7 +13,7 @@ class Quiz extends Component {
       length: 4,
       count: 0,
       random: props.random ? props.random : function() {
-        return  Math.round((Math.random() * 20))
+        return  Math.round((Math.random() * (props.data.length - 1)))
       }
     }
   }

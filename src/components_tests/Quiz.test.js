@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Quiz from '../components/Quiz';
 import Game from '../components/Game';
-import quizdata from '../quizquestions/data'
+import quizData from '../quizquestions/data';
 import { shallow, mount, render } from 'enzyme';
 
 let testData = [
@@ -67,4 +67,17 @@ it('renders the second question after replying to the first question', () => {
   expect(wrap.find('Option').length).toEqual(2);
   expect(wrap.find('Option').at(0).prop('text')).toEqual('Question 2 - Option 1')
   expect(wrap.find('Option').at(1).prop('text')).toEqual('Question 2 - Option 2')
+});
+
+it('delegates player switch after answering 5 questions', () => {
+  var handleQuizSwitchWasInvoked = false;
+  const wrap = shallow(<Quiz data={quizData} handleQuizSwitch={function(){ handleQuizSwitchWasInvoked = true;} } handleQuizScore={function(){} }  />)
+
+  wrap.find('Option').at(0).prop('onAnswerSelected')()
+  wrap.find('Option').at(0).prop('onAnswerSelected')()
+  wrap.find('Option').at(0).prop('onAnswerSelected')()
+  wrap.find('Option').at(0).prop('onAnswerSelected')()
+  wrap.find('Option').at(0).prop('onAnswerSelected')()
+
+  expect(handleQuizSwitchWasInvoked).toEqual(true);
 });
