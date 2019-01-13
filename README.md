@@ -6,6 +6,9 @@ Development Team: [Naomi Bid](https://github.com/NaomiBid) | [Rupert Adams](http
 # Final Project  - Developer Pub Quiz
 This is an entirely front-end single page web app built with ReactJS. Our unit tests were done with Jest and Enzyme and our feature tests were done in Cypress.
 
+## Team Approach
+The team had very little experience with ReactJS and the test suites that would accompany it. Our main focuss at the start of this project was to explore React and learn as much as we could in the 2 week timeframe that we had. We wanted to learn by doing and practiced agile development to help us achieve our goal. 
+
 ## User Stories
 ```
 As a user,
